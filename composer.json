@@ -1,0 +1,43 @@
+{
+    "name": "hypejunction/elgg-mentions",
+    "version": "0.0.0",
+    "type": "elgg-plugin",
+    "description": "Mentions",
+    "homepage": "http://hypejunction.com",
+    "keywords": [
+        "elgg", "plugin"
+    ],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ismayil Khayredinov",
+            "email": "info@hypejunction.com"
+        }
+    ],
+    "extra": {
+        "installer-name": "hypeMentions"
+    },
+    "require": {
+        "composer/installers": "~1.0",
+        "npm-asset/at.js": "^1.5",
+        "php-extended/php-emoji-cheat-sheet": "^1.0",
+        "npm-asset/jquery.caret": "^0.3.1",
+        "hypejuntion/elgg-di": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "classes/"
+        }
+    },
+    "config": {
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}

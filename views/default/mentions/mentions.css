@@ -1,0 +1,126 @@
+.atwho-view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	margin-top: 1rem;
+	background: white;
+	color: black;
+	border: 1px solid #e6e6ea;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 2px 3px rgba(0, 0, 0, .2);
+	width: 18rem;
+	z-index: 11110 !important;
+}
+
+.atwho-view .atwho-header:hover {
+	cursor: default;
+}
+
+.atwho-view .cur {
+	background: #0398e2;
+	color: white;
+	transition: none;
+}
+
+.atwho-view .cur small {
+	color: white;
+}
+
+.atwho-view strong {
+	color: #0398e2;
+}
+
+.atwho-view .cur strong {
+	color: white;
+	font-weight: bold;
+}
+
+.atwho-view ul {
+	list-style: none;
+	padding: 0;
+	margin: auto;
+	max-height: 18rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.atwho-view ul li {
+	display: block;
+	padding: 0.5rem;
+	border-bottom: 1px solid #e6e6ea;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.atwho-view small {
+	font-size: smaller;
+	color: #e6e6ea;
+	font-weight: normal;
+}
+
+.atwho-view ul .mentions-picker-item {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.mentions-picker-item [rel="icon"] {
+	width: 1.25rem;
+	height: 1.25rem;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+}
+
+.mentions-picker-item [rel="emoji"],
+.mentions-picker-item [rel="icon"],
+.mentions-picker-item [rel="hashtag"] {
+	margin-right: 0.5rem;
+	line-height: normal;
+	vertical-align: middle;
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.mentions-picker-item [rel="hashtag"] {
+	color: #0398e2;
+	font-weight: 600;
+}
+
+.mentions-user-link img {
+	margin: -4px 8px 0 0;
+	vertical-align: middle;
+	max-height: 24px;
+	border-radius: 50%;
+	line-height: inherit;
+}
+
+.mentions-user-icon {
+	display: inline;
+	padding: 0;
+	margin: 0 5px 2px 0;
+	vertical-align: middle;
+}
+
+.mentions-user-link:hover {
+	text-decoration: none;
+}
+
+.mentions-user-link {
+	padding: 0 8px 0 0;
+	background: #f5f5f5;
+	border-radius: 24px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+	color: black;
+	vertical-align: middle;
+	display: inline-block;
+	margin-top: -2px;
+}
+
+.mentions-user-link:hover {
+	background-color: #f4f4f4;
+}
+
