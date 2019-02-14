@@ -22,7 +22,7 @@
         "npm-asset/at.js": "^1.5",
         "php-extended/php-emoji-cheat-sheet": "^1.0",
         "npm-asset/jquery.caret": "^0.3.1",
-        "hypejuntion/elgg-di": "*"
+        "hypejunction/elgg-di": "*"
     },
     "autoload": {
         "psr-0": {
