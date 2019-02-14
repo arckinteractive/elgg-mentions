@@ -14,9 +14,6 @@
             "email": "info@hypejunction.com"
         }
     ],
-    "extra": {
-        "installer-name": "hypeMentions"
-    },
     "require": {
         "composer/installers": "~1.0",
         "npm-asset/at.js": "^1.5",
