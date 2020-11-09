@@ -3,7 +3,7 @@
 
     <name>Mentions</name>
     <id>elgg-mentions</id>
-    <version type="dist">1.0.2</version>
+    <version type="dist">1.0.3</version>
 
     <description>Mention users, groups, tags and autocomplete emojis</description>
     <category>content</category>
