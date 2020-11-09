@@ -140,29 +140,30 @@ class Hooks {
 
 		preg_match_all('/@\[(\d+):(.*?)\]/i', $description, $matches);
 
-		foreach ($matches as $match) {
-			$guid = elgg_extract(1, $match);
-			$mention = get_entity($guid);
+		if (is_array($matches) && $matches[1]) {
+			foreach ($matches[1] as $guid) {
+				$mention = get_entity($guid);
 
-			if (!$mention) {
-				continue;
-			}
+				if (!$mention) {
+					continue;
+				}
 
-			add_entity_relationship($entity->guid, 'mentions', $mention->guid);
+				add_entity_relationship($entity->guid, 'mentions', $mention->guid);
 
-			if ($mention instanceof \ElggUser && $poster && has_access_to_entity($entity, $mention)) {
-				$title = elgg_echo('notify:mention:subject', [$poster->getDisplayName()]);
-				$description = elgg_echo('notify:mention:body', [
-					$poster->getDisplayName(),
-					$entity->getURL(),
-				]);
+				if ($mention instanceof \ElggUser && $poster && has_access_to_entity($entity, $mention)) {
+					$title = elgg_echo('notify:mention:subject', [$poster->getDisplayName()]);
+					$description = elgg_echo('notify:mention:body', [
+						$poster->getDisplayName(),
+						$entity->getURL(),
+					]);
 
-				notify_user($mention->guid, $entity->owner_guid, $title, $description, [
-					'action' => 'mention',
-					'object' => $entity,
-					'subject' => $poster,
-					'url' => $entity->getURL(),
-				]);
+					notify_user($mention->guid, $entity->owner_guid, $title, $description, [
+						'action' => 'mention',
+						'object' => $entity,
+						'subject' => $poster,
+						'url' => $entity->getURL(),
+					]);
+				}
 			}
 		}
 	}
